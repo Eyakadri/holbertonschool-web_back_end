@@ -1,8 +1,9 @@
 class Currency {
-    constructor(code, name) {
-        this.code = code;
-        this.name = name;
-    }
+  constructor(code, name) {
+    this.code = code;
+    this.name = name;
+  }
+
   get code() {
     return this._code;
   }
@@ -23,4 +24,4 @@ class Currency {
     return `${this.name} (${this.code})`;
   }
 }
- export default Currency;
+export default Currency;
