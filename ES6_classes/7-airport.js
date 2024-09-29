@@ -4,9 +4,12 @@ class Airport {
     this._code = code;
   }
 
-  toString() {
+  get code() {
     return this._code;
   }
-}
 
+  toString() {
+    return `[object ${this.code}]`;
+  }
+}
 export default Airport;
