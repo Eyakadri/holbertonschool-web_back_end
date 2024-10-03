@@ -1,2 +1,2 @@
-// create database
+// Use or create the database
 use my_db;
