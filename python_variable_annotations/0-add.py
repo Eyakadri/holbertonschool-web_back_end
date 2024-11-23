@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""Module for basic annotations - add"""
+
+
 def add(a: float, b: float) -> float:
     """returns the sum of two float numbers
     Args:
