@@ -13,8 +13,8 @@ app.get('/students', async (req, res) => {
     const data = await fs.readFile(process.argv[2], 'utf8');
     const lines = data.trim().split('\n').slice(1);
     const studentsByField = {};
-    
-    lines.forEach(line => {
+
+    lines.forEach((line) => {
       const [firstName, , , field] = line.split(',');
       if (!studentsByField[field]) {
         studentsByField[field] = [];
@@ -25,9 +25,9 @@ app.get('/students', async (req, res) => {
     const totalStudents = Object.values(studentsByField)
       .reduce((sum, students) => sum + students.length, 0);
 
-    let response = ['This is the list of our students'];
+    const response = ['This is the list of our students'];
     response.push(`Number of students: ${totalStudents}`);
-    
+
     Object.entries(studentsByField).forEach(([field, students]) => {
       response.push(`Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`);
     });
