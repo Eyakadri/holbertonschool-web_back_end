@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""module for annotating list operations with their types"""
+"""Module for annotating list operations with their types."""
 
 
-from typing import List, Tuple
+from typing import Iterable, Sequence, List, Tuple
 
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
-    """Returns a list of tuples
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    """Returns a list of tuples containing sequences and their lengths
     Args:
-        lst (List[str]): List of strings to process
+        lst (Iterable[Sequence]): Iterable of sequences to process
     Returns:
-        List[Tuple[str, int]]: List of tuples
+    List[Tuple[Sequence, int]]: List of tuples
     """
     return [(i, len(i)) for i in lst]
